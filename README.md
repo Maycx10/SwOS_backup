@@ -1,8 +1,8 @@
 # Bash script for MikroTik SwOS backup configuration file once a day
 ### Precondition:
 1. Tested in CentOS 7
-2. curl already installed or use install command ```yum install curl```
-3. snmpget; mibs-libary already installed or use install command ```yum -y install net-snmp net-snmp-utils```
+2. curl already installed or use install command ```yum -y install curl```
+3. snmpget and mibs-libary already installed or use install command ```yum -y install net-snmp net-snmp-utils```
 4. Create folder for script, logs, tmp and backup files ```mkdir /opt/swos_bkp```
 
 ### How script is works:
