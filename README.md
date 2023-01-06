@@ -23,11 +23,13 @@
 2. ```yum -y install net-snmp net-snmp-utils```
 3. ```mkdir /opt/swos_bkp```
 4. Copy or unzip this repository in the directory ```/opt/swos_bkp/```
-5. Use cron for run the script would you like. For example:
+5. Edit the vars ```snmp_commname```, ```user```, ```pass``` in the script file ```swos_backup.sh```
+6. ```chmod +x /opt/swos_bkp/swos_backup.sh```
+6. Use cron for run the script would you like. For example:
    - ```crontab -e```
    - Write this command and save ```00 16 * * * root /opt/swos_bkp/swos_backup.sh >> /var/log/cron 2>&1```
    - For more information google how to crontab works :) or [click here](https://www.generateit.net/cron-job/).
-6. Rotate logs file would you like. For example rotateing once day a week:
+7. Rotate logs file would you like. For example rotateing once day a week:
    - ```touch /etc/logrotate.d/swos_bkp```
    - ```vi /etc/logrotate.d/swos_bkp```
    - Write this and save in the file 
