@@ -23,6 +23,7 @@
 2. ```yum -y install net-snmp net-snmp-utils```
 3. ```mkdir /opt/swos_bkp```
 4. Copy or unzip this repository in the directory ```/opt/swos_bkp/```
+5. Write **your** IPs in the ```/opt/swos_bkp/hostsw```
 5. Edit the vars ```snmp_commname```, ```user```, ```pass``` in the script file ```swos_backup.sh```
 6. ```chmod +x /opt/swos_bkp/swos_backup.sh```
 6. Use cron for run the script would you like. For example:
