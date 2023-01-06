@@ -18,4 +18,24 @@
 10. Logs writes in the file ```/opt/swos_bkp/log/swos_bkp.log```
 11. Deletes the old backup directory if found. Var ```days_to_keep``` in begining of the script
 
-### How to install:
+### How to install step by step:
+1. ```yum -y install curl```
+2. ```yum -y install net-snmp net-snmp-utils```
+3. ```mkdir /opt/swos_bkp```
+4. Copy or unzip this repository in the directory ```/opt/swos_bkp/```
+5. Use cron for run the script would you like. For example:
+   - ```crontab -e```
+   - Write this command and save ```00 16 * * * root /opt/swos_bkp/swos_backup.sh >> /var/log/cron 2>&1```
+   - For more information google how to crontab works :) or [click here](https://www.generateit.net/cron-job/).
+6. Rotate logs file would you like. For example rotateing once day a week:
+   - ```touch /etc/logrotate.d/swos_bkp```
+   - ```vi /etc/logrotate.d/swos_bkp```
+   - Write this and save in the file 
+   ``` 
+   /opt/swos_bkp/log/*.log {
+        rotate 3
+        weekly
+        compress
+        missingok
+        notifempty 
+        } 
