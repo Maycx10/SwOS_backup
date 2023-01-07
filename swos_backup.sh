@@ -65,4 +65,4 @@ done < hostsw
 
 # Remove backup folders older than $date minus $days_to_keep
 echo $(date) "Info: remove folders older than $date + $days_to_keep days" >> $log
-find bkp_files/ -daystart -type d -mtime +$days_to_keep -delete
+find bkp_files/ -daystart -mtime +$days_to_keep -delete
