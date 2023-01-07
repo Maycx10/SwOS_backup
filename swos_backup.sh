@@ -26,7 +26,7 @@ do
 	# If the platform contains SwOS continue
 	if [[ "$snmp_sysdescr" =~ .*SwOS.* ]]; then
 
-		# Making a snmp-request to find out the system name
+		# Making a snmp-request to find out the system name. !!!Switch system name must not contain spaces!!!
 		sysname=$(snmpget -v2c -c $snmp_commname -r 1 $ip_addr sysName.0 | cut -d':' -f 4 | cut -d ' ' -f 2)
 		filename=$sysname".swb"
 
