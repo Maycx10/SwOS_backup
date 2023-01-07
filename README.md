@@ -1,4 +1,4 @@
-# Bash script for MikroTik SwOS backup configuration file
+# Bash script for backup MikroTik SwOS configuration file
 ### Precondition:
 1. Tested in CentOS 7
 2. Curl already installed or use install command ```yum -y install curl```
