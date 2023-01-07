@@ -28,7 +28,7 @@
 6. ```chmod +x /opt/swos_bkp/swos_backup.sh```
 6. Use cron for run the script would you like. For example:
    - ```crontab -e```
-   - Write this command and save ```00 16 * * * root /opt/swos_bkp/swos_backup.sh >> /var/log/cron 2>&1```
+   - Write this command and save ```00 16 * * * root /opt/swos_bkp/swos_backup.sh >> /var/log/messages 2>&1```
    - For more information google how to crontab works :) or [click here](https://www.generateit.net/cron-job/).
 7. Rotate logs file would you like. For example rotateing once day a week:
    - ```touch /etc/logrotate.d/swos_bkp```
