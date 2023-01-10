@@ -11,7 +11,7 @@
 2. Creates directory for today backup files, for example ```/opt/swos_bkp/bkp_files/16:00-30.12.2022```
 3. Clears old tmp files '*.swb' in the ```/opt/swos_bkp/tmp/```
 4. Read 'hostsw' file with IPs line by line
-5. Makes a snmp-request to IP from 'hostsw' to find out the platform
+5. Makes a snmp-request to an IP from 'hostsw' to find out the platform
 6. Makes a snmp-request to find out the system name. **System's name must be without backspaces**
 7. Download config file by curl to ```/opt/swos_bkp/tmp``` directory
 8. Checking the downloaded configuration for errors (too small weight, less than 100b and 401 errors in the downloaded file)
