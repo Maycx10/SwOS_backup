@@ -4,7 +4,7 @@
 2. Curl already installed or use install command ```yum -y install curl```
 3. Snmpget and mibs-libary already installed or use install command ```yum -y install net-snmp net-snmp-utils```
 4. Create folder for script, logs, tmp and backup files ```mkdir /opt/swos_bkp```
-5. **Switch system's name must not contain spaces!**
+5. **Switch system's name must not contain spaces and must be unique!**
 
 ### How script is works:
 1. Uses directory ```/opt/swos_bkp/``` for all files
