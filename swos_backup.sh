@@ -32,7 +32,7 @@ do
 
 		# Downloading the backup-file
 		echo $(date) "Info: download $filename to tmp/$filename" >> $log
-		curl --silent --anyauth --digest -u $user:$pass "http://$ip_addr/backup.swb" -o tmp/$filename
+		curl --silent --anyauth --digest --max-time 120 -u $user:$pass "http://$ip_addr/backup.swb" -o tmp/$filename
 
         minimumsize=100
         actualsize=$(wc -c < "tmp/$filename" | awk '{print $1}')
